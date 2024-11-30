@@ -8,15 +8,7 @@ const resiterpage = (req, res) => {
 const loginpage = (req, res) => {
     return res.render('login')
 }
-// const dashbord = async (req, res) => {
 
-//     try {
-        
-//     } catch (error) {
-        
-//     }
-//     return res.render('dash')
-// }
 const Resiterusers = async (req, res) => {
     try {
         const { name, email, password } = req.body;
@@ -38,7 +30,6 @@ const loginuseres = async (req, res) => {
 
     try {
         const { email, password } = req.body;
-
         const user = await usermodels.findOne({ email: email })
 console.log(user);
 
